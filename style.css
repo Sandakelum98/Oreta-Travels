@@ -118,7 +118,7 @@ h5, .h5 {
 	background-color: #42b3e9;
 }
 .bg-black-transparent {
-	background-color: #00000040;
+	background-color: #00000080;
 }
 .bg-light-green {
 	background-color: #50cb58;
@@ -231,6 +231,12 @@ h5, .h5 {
 }
 .p-l-5 {
 	padding-left: 5px;
+}
+.p-r-20 {
+	padding-right: 20px;
+}
+.p-l-20 {
+	padding-left: 20px;
 }
 .no-padding {
 	padding: 0;
@@ -393,6 +399,7 @@ ul {
 }
 .header-menu li {
 	display: inline-block;
+	position: relative;
 }
 .header-menu li a {
 	padding: 0 15px;
@@ -419,14 +426,56 @@ ul {
 	font-size: 30px;
 	line-height: 30px;
 }
+.header-menu>li:hover > .sub-menu {
+	transform: translateY(0px);
+	opacity: 1;
+	visibility: visible;
+}
+.sub-menu {
+	position: absolute;
+	top: 66px;
+	left: 0;
+	width: 280px;
+	cursor: pointer;
+	box-shadow: 0px 3px 15px rgb(0 0 0 / 40%);
+	background-color: #42b3e9e6;
+	z-index: 99;
+	-webkit-transition: 0.4s all ease-out;
+	-moz-transition: 0.4s all ease-out;
+	transition: 0.4s all ease-out;
+	transform: translateY(40px);
+	opacity: 0;
+	visibility: hidden;
+}
+.sub-menu li {
+	display: block;
+}
+.sub-menu li a {
+	color: #ffff;
+	width: 100%;
+	display: block;
+	padding: 7px 20px;
+	border-bottom: 1px solid #ffffff38;
+	display: block;
+}
+.sub-menu li a:hover {
+	color: #fff!important;
+	background-color: #42b3e9 !important;
+}
 /*intro-section*/
 .intro {
 	position: relative;
 }
 .intro-inner {
 	position: absolute;
-	bottom: 170px;
+	bottom: 60px;
 	width: 100%;
+}
+.page-intro-inner {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
 }
 /*packages-section*/
 .package {
@@ -475,6 +524,17 @@ ul {
 	font-size: 22px;
 }
 /*popular-destinations-section*/
+.page-title {
+	background-color: #28a5e5;
+	background-image: url(img/bg-home-intro.jpg);
+	background-size: cover;
+}
+.page-title-inner {
+	min-height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .popular-destinations-sub-title {
 	display: flex;
 	align-items: center;
@@ -539,6 +599,7 @@ ul {
 .support-agents-img-container {
 	position: relative;
 	top: -65px;
+	height: 150px;
 }
 .support-agent-img {
 	width: 145px;
@@ -547,15 +608,27 @@ ul {
 	border: 2px solid #fff;
 	display: inline-block;
 	position: relative;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.support-agent-img:nth-child(1) {
+	margin-left: -230px;
+}
+.support-agent-img:nth-child(2) {
+	margin-left: -115px;
+}
+.support-agent-img:nth-child(4) {
+	margin-left: 115px;
+}
+.support-agent-img:nth-child(5) {
+	margin-left: 230px;
 }
 .support-agent-img img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	border-radius: 100%;
-}
-.support-agent-img.next {
-	left: -40px;
 }
 .support-contact-detail-item {
 	display: flex;
@@ -777,13 +850,210 @@ ul {
 
 }
 
+/*travel-guide-page*/
+.container-padding-sides {
+	padding: 0 150px;
+}
+.travel-guide-table table {
+	width: 100%;
+}
+.travel-guide-table table tr td, .travel-guide-table table tr th {
+	padding: 4px 10px;
+	text-align: left;
+	background-color: #e7e7e7;
+	border: 2px solid #fff;
+	margin-bottom: 2px;
+}
+.travel-guide-table table tr th {
+	background-color: #fabb3d;
+	padding: 6px 20px;
+}
+.td-row {
+	padding: 10px;
+	border-bottom: 1px solid #e7e7e7;
+}
+.td-row:first-child {
+	border-top: 1px solid #e7e7e7;
+}
+.td-row .td-title {
+	position: relative;
+}
+.td-row .td-title h3 {
+	font-size: 22px;
+}
+.td-row .td-title:before {
+	content: "\f107";
+	font-family: fontawesome;
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	width: 22px;
+	height: 22px;
+	background-color: #282828;
+	display: inline-block;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 3px;
+	color: #fff;
+	line-height: 16px;
+}
+.td-desc {
+	display: none;
+}
+
+/*destination-page*/
+.destination-main-intro-left p {
+	margin-bottom: 20px;
+}
+.round-img {
+	border-radius: 15px;
+}
+.destination-highlights-item {
+	position: relative;
+	margin-bottom: 30px;
+}
+.destination-highlights-img-inner {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 0 0 15px 15px;
+}
+.main-detail-item-desc:before {
+	content: '';
+}
+.destination-popular-things-right {
+	padding: 40px 30px;
+	border-radius: 20px;
+	box-shadow: 0 0 30px 3px #0000001f;
+}
+.popular-things-rigth-item ul li {
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+.popular-things-rigth-item ul li:before {
+	content: '\f058';
+	font-family: 'FontAwesome';
+	position: absolute;
+	left: 0;
+	color: #4bae4f;
+	font-size: 17px;
+	top: -2px;
+}
+
+/*contact-us-page*/
+.contact-us-left-desc p {
+	margin-bottom: 15px;
+}
+.contact-item {
+	position: relative;
+	padding-left: 80px;
+}
+.contact-item-label {
+	position: absolute;
+	left: 0;
+}
+.contact-right-box {
+	padding: 40px 30px;
+	border-radius: 20px;
+	box-shadow: 0 0 30px 3px #0000001f;
+}
+.contact-form-btn {
+	width: unset !important;
+	text-align: center !important;
+	padding: 11px 50px !important;
+}
+
+/*things-todo*/
+.thing-todo {
+	box-shadow: 0 0 20px rgb(92 96 101 / 12%);
+	padding: 40px;
+	margin-bottom: 50px;
+}
+.thing-todo-content {
+	padding-left: 20px;
+}
 
 
+.intro-form-container {
+	display: inline-block;
+}
+.intro-form {
+	width: 1000px;
+	background-color: #e1ebeb;
+	/*padding: 8px 15px;*/
+	border-radius: 38px;
+}
+.intro-form .row {
+	/*align-items: center;*/
+	margin: 0;
+}
+.col-md-3.form-col {
+	padding: 10px 15px 10px 50px;
+	position: relative;
+}
+.col-md-3.form-col.no-padding {
+	padding: 10px 15px 10px 15px;
+}
+.col-md-3.form-col.separator {
+	border-right: 1px solid #acacac;
+}
+.intro-form-input {
+	color: #202020;
+	font-size: 16px;
+	border: none;
+	background-color: #e1ebeb;
+	padding: 12px 0;
+	width: 170px;
+	position: relative;
+}
+.intro-form-input:focus-visible {
+	outline: none;
+}
+.intro-form-input::placeholder {
+	color: #202020;
+}
+.start-date-input:before {
+	content: url(img/icon-intro-form-1.png);
+	position: absolute;
+	left: 25px;
+	top: 50%;
+	transform: translateY(-60%);
+	z-index: 999;
+}
+.duration-input:before {
+	content: url(img/icon-intro-form-2.png);
+	position: absolute;
+	left: 25px;
+	top: 50%;
+	transform: translateY(-60%);
+	z-index: 999;
+}
+.package-input:before {
+	content: url(img/icon-intro-form-3.png);
+	position: absolute;
+	left: 25px;
+	top: 50%;
+	transform: translateY(-60%);
+	z-index: 999;
+}
+.intro-form-btn {
+	padding: 6px 45px;
+	color: #232323;
+}
+.intro-form-btn:before {
+	content: none !important;
+}
+.intro-form-btn:hover {
+	color: #232323 !important;
+}
 
-
-
-
-
+.container-md {
+	max-width: 900px;
+}
 
 
 
