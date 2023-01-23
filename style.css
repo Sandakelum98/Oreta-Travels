@@ -1054,6 +1054,129 @@ ul {
 .container-md {
 	max-width: 900px;
 }
+.custom-container-750 {
+	max-width: 750px;
+}
+.book-now-form-input.sm {
+	width: 48%;
+}
+.book-now-form-input.sm:nth-child(2) {
+	float: right;
+}
+.inquire-form-container .contact-right-box {
+	padding: 40px;
+}
+
+.activity-img-cont {
+	position: relative;
+	margin-bottom: 20px;
+}
+.activity-img-cont img {
+	width: 100%;
+}
+.activity-img-caption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 0 10px;
+}
+.activities-gallery .custom-col {
+	padding: 0 10px;
+}
+
+/*-----------------------------------------*/
+.slide_menu_open {
+	cursor: pointer;
+}
+.slide-menu-hide {
+	position: fixed;
+	right: -640px;
+	top: 0;
+	height: 100%;
+	min-width: 360px;
+	max-width: 100%;
+	background: #fff;
+	color: #000;
+	z-index: 9999;
+	overflow-x: hidden;
+	border-left: 1px solid #ddd;
+}
+.slide-menu .slide-menu-form {
+	padding: 30px;
+	vertical-align: middle;
+}
+.slide-menu .slide_menu_close {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	border: none;
+	text-align: right;
+	font-size: 36px;
+	padding: 0 10px;
+}
+.slide-menu-form .primary-btn {
+	padding: 5px 20px 5px 50px;
+	min-width: 155px;
+}
+.slide-menu-form .primary-btn:before {
+	left: 24px;
+}
+
+
+
+
+.payment-box {
+	box-shadow: 0 0 30px 3px #0000001f;
+	padding: 55px;
+	border-radius: 20px;
+	position: relative;
+	top: -130px;
+	background-color: #fff;
+}
+.payment-page-title .page-title-inner {
+	align-items: baseline;
+}
+.payment-page-title h2 {
+	margin-top: 62px;
+}
+.payment-page-title {
+	background-image: url(img/contact-intro-img.jpg);
+	background-position: center;
+}
+.large-para {
+	font-size: 18px;
+}
+.payment-box-up {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #e1e1e1;
+}
+.payment-details-list .label-up {
+	width: 140px;
+	font-weight: 500;
+	display: inline-block;
+}
+.payment-details-list .label-down {
+	width: 180px;
+	font-weight: 500;
+	display: inline-block;
+}
+.payment-details-list .label-down.bold {
+	font-weight: 700;
+}
+.payment-details-list li {
+	margin-bottom: 8px;
+}
+.payment-box-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.payment-box-bottom-left .book-now-form-input {
+	width: 270px;
+	padding: 10px 20px;
+}
 
 
 
